@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="me.donlis.navmagic.ui.MainFragment"
+        android:label="main_fragment" >
+
+        <action android:id="@+id/action_main_to_blank"
+            app:destination="@id/blankFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="me.donlis.navmagic.ui.BlankFragment"
+        android:label="blank_fragment"/>
+
+    <include app:graph="@navigation/detail_nav_graph" />
+
+</navigation>

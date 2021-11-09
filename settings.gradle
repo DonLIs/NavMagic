@@ -1,0 +1,38 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+//        google()
+//        mavenCentral()
+//        jcenter() // Warning: this repository is going to shut down soon
+        maven {
+            allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/repository/central'
+        }
+        maven {
+            allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/repository/gradle-plugin'
+        }
+        maven {
+            allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven {
+            allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'
+        }
+        maven {
+            allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/repository/google'
+        }
+        maven { url "https://jitpack.io" }
+        maven {
+            allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/repositories/releases/'
+        }
+    }
+}
+rootProject.name = "NavMagic"
+include ':app'
+include ':detail'
+include ':base'
+include ':other'
